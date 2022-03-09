@@ -30,6 +30,7 @@ jobs:
           FROM: openresty/openresty:1.19.3.2-alpine
         with:
           platforms: linux/amd64,linux/arm64
+          build-args: FROM=openresty/openresty:1.19.3.2-alpine
           push: true
           tags: wutongpaas/openresty:1.19.3.2-alpine
 
