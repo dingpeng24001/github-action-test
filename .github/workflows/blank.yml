@@ -26,13 +26,11 @@ jobs:
       - name: Build and push
         id: docker_build
         uses: docker/build-push-action@v2
-        env: 
-          FROM: openresty/openresty:1.19.3.2-alpine
         with:
           platforms: linux/amd64,linux/arm64
-          build-args: FROM=openresty/openresty:1.19.3.2-alpine
+          build-args: FROM=k8s.gcr.io/sig-storage/nfs-provisioner:v3.0.0
           push: true
-          tags: wutongpaas/openresty:1.19.3.2-alpine
+          tags: wutongpaas/nfs-provisioner:v3.0.0
 
       - name: Image digest
         run: echo ${{ steps.docker_build.outputs.digest }}      
