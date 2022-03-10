@@ -28,9 +28,9 @@ jobs:
         uses: docker/build-push-action@v2
         with:
           platforms: linux/amd64,linux/arm64
-          build-args: FROM=quay.io/coreos/etcd:v3.3.18
+          build-args: FROM=registry:2.6.2
           push: true
-          tags: wutongpaas/etcd:v3.3.18
+          tags: wutongpaas/registry:2.6.2
 
       - name: Image digest
         run: echo ${{ steps.docker_build.outputs.digest }}      
