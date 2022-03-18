@@ -30,7 +30,7 @@ jobs:
           platforms: linux/amd64,linux/arm64
           build-args: FROM=k8s.gcr.io/sig-storage/nfs-subdir-external-provisioner:v4.0.2
           push: true
-          tags: wutongpaas/registry:2.6.2
+          tags: wutongpaas/nfs-subdir-external-provisioner:v4.0.2
 
       - name: Image digest
         run: echo ${{ steps.docker_build.outputs.digest }}      
