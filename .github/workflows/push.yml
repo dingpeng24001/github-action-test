@@ -14,10 +14,12 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
+      - name: Set ENV
+        run: |
+          echo "COMMIT_SHORT_ID=${BASE_VERSION}-dev-${GITHUB_SHA::7}" >> $GITHUB_ENV      
+
       - name: commit-id
-        env:
-          COMMIT_SHORT_ID: ${GITHUB_SHA::7}
         run: |
           echo ${COMMIT_ID}
-          echo ---${COMMIT_SHORT_ID}
+          echo ${COMMIT_SHORT_ID}
           echo ${GITHUB_SHA::7}

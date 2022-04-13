@@ -13,9 +13,11 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
-      - name: version 
-        env:
-          RELEASE_TAG: ${GITHUB_REF#refs/*/}
+      - name: Set ENV
+        run: |
+          echo "RELEASE_TAG=${GITHUB_REF#refs/*/}" >> $GITHUB_ENV
+          
+      - name: version
         run: | 
           echo ${RELEASE_REF}
           echo ${RELEASE_TAG}
