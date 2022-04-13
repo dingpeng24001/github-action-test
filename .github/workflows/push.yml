@@ -1,5 +1,8 @@
 name: push
 
+env:
+  COMMIT_ID: ${GITHUB_SHA::7}
+
 on:
   push:
     branches: [main]
@@ -13,6 +16,4 @@ jobs:
 
       - name: commit-id
         run: |
-          echo ${GITHUB_SHA}
-          echo ${GITHUB_SHA::7}
-          echo ${GITHUB_REF}
+          echo ${COMMIT_ID}

@@ -1,5 +1,8 @@
 name: release
 
+env:
+  VERSION: ${GITHUB_REF#refs/*/}
+
 on: 
   release:
     types: [created]
@@ -10,11 +13,5 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
-      - name: Set output
-        id: vars
-        run: echo ::set-output name=tag::${GITHUB_REF#refs/*/}
-
-      - name: release id
-        env:
-          VERSION: ${GITHUB_REF#refs/*/}
+      - name: version 
         run: echo ${VERSION}
