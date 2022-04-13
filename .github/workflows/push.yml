@@ -15,3 +15,4 @@ jobs:
         run: |
           echo ${GITHUB_SHA}
           echo ${GITHUB_SHA::7}
+          echo ${GITHUB_REF}
