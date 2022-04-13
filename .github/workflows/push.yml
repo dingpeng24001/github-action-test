@@ -16,7 +16,7 @@ jobs:
 
       - name: Set ENV
         run: |
-          echo "COMMIT_SHORT_ID=${BASE_VERSION}-dev-${GITHUB_SHA::7}" >> $GITHUB_ENV      
+          echo "COMMIT_SHORT_ID=${GITHUB_SHA::7}" >> $GITHUB_ENV      
 
       - name: commit-id
         run: |
