@@ -2,7 +2,7 @@ name: push
 
 env:
   COMMIT_ID: ${{ github.sha }}
-  VERSION: ${{ github.ref }}
+  VERSION: ${{ github.head_ref }}
 
 on:
   push:
