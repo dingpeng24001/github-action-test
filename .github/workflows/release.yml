@@ -1,7 +1,7 @@
 name: release
 
 env:
-  VERSION: ${GITHUB_REF#refs/*/}
+  VERSION: ${{ github.ref#refs/*/ }}
 
 on: 
   release:

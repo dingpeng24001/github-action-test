@@ -1,7 +1,8 @@
 name: push
 
 env:
-  COMMIT_ID: ${GITHUB_SHA::7}
+  COMMIT_ID: ${{ github.sha }}
+  VERSION: ${{ github.ref }}
 
 on:
   push:
@@ -17,3 +18,4 @@ jobs:
       - name: commit-id
         run: |
           echo ${COMMIT_ID}
+          echo ${VERSION}
