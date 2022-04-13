@@ -19,5 +19,5 @@ jobs:
           COMMIT_SHORT_ID: ${GITHUB_SHA::7}
         run: |
           echo ${COMMIT_ID}
-          echo ${COMMIT_SHORT_ID}
+          echo ---${COMMIT_SHORT_ID}
           echo ${GITHUB_SHA::7}
