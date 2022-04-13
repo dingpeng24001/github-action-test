@@ -1,4 +1,4 @@
-name: puhs
+name: push
 
 on:
   push:
