@@ -11,8 +11,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
-      - name: Check Hash
+      - name: commit-id
         run: |
           echo ${GITHUB_SHA}
           echo ${GITHUB_SHA::7}
-         
