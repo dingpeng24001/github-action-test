@@ -4,8 +4,8 @@ env:
   COMMIT_ID: ${{ github.sha }}
 
 on:
-  push:
-    branches: [main]
+  # push:
+  #   branches: [main]
   workflow_dispatch:
 
 jobs:
